@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #111;
+    color: #ccc;
+    font-family: 'UnifrakturMaguntia', serif;
+    overflow-x: hidden;
+    background-image: url('https://cdn.pixabay.com/photo/2016/11/29/05/45/grainy-texture-1867889_1280.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    animation: grain 8s steps(10) infinite;
+}
+
+@keyframes grain {
+    0%, 100% { background-position: 0 0; }
+    10% { background-position: -5px 5px; }
+    20% { background-position: 5px -5px; }
+    30% { background-position: -10px 10px; }
+    40% { background-position: 10px -10px; }
+    50% { background-position: -15px 15px; }
+    60% { background-position: 15px -15px; }
+    70% { background-position: -20px 20px; }
+    80% { background-position: 20px -20px; }
+    90% { background-position: -25px 25px; }
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 2px solid #f00;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #f00;
+    text-shadow: 0 0 10px #f00, 0 0 20px #f00;
+    animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+    20%, 24%, 55% { opacity: 0.4; }
+}
+
+.morse {
+    font-family: monospace;
+    color: #0f0;
+    font-size: 1.5rem;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.gothic-text {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: #ddd;
+    text-shadow: 0 0 5px #000;
+}
+
+.creepy-image {
+    width: 100%;
+    max-width: 400px;
+    margin: 1rem auto;
+    display: block;
+    filter: grayscale(80%) contrast(120%);
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.creepy-image:hover {
+    transform: scale(1.05);
+    filter: grayscale(0%) contrast(150%);
+    animation: glitch 0.3s infinite;
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-5px, 5px); }
+    40% { transform: translate(-5px, -5px); }
+    60% { transform: translate(5px, 5px); }
+    80% { transform: translate(5px, -5px); }
+    100% { transform: translate(0); }
+}
+
+.morse-section {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.7);
+    margin: 2rem 0;
+    border: 1px solid #0f0;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.flicker {
+    animation: flicker 3s infinite;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #f00;
+    text-align: center;
+    text-shadow: 0 0 10px #f00;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    border-top: 2px solid #f00;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.5rem;
+}
